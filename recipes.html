@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriCure | Recipes</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>NutriCure</h1>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="user-input.html">User Input</a>
+            <a href="predicted-deficiency.html">Predicted Deficiency</a>
+            <a href="recipes.html">Recipes</a>
+            
+        </nav>
+    </header>
+
+    <!-- Recipe Recommendation Section -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dropdown with Images</title>
+        <style>
+            #image-container {
+                margin-top: 40px;
+            }
+            #image-container img {
+                max-width: 1000px;
+                max-height: 1000px;
+            }
+        </style>
+    </head>
+    <body>
+        <label for="nutrients">Deficencies:</label>
+        <select id="nutrients" name="nutrients" onchange="showImage()">
+            <option value="">--Select--</option>
+            <option value="iron">Iron</option>
+            <option value="zinc">Zinc</option>
+            <option value="vitamin_a">Vitamin A</option>
+            <option value="vitamin_b12">Vitamin B12</option>
+            <option value="vitamin_c">Vitamin C</option>
+            <option value="vitamin_d">Vitamin D</option>
+        </select>
+    
+        <div id="image-container">
+            <!-- Image will be displayed here -->
+        </div>
+    
+        <script>
+            function showImage() {
+                const nutrient = document.getElementById("nutrients").value;
+                const imageContainer = document.getElementById("image-container");
+    
+                // Clear the previous image
+                imageContainer.innerHTML = "";
+    
+                // Map nutrient to an image URL
+                const images = {
+                    iron: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAu2mZ830SD2185RCt26uImF95C7pXFhwXMQ&s",
+                    zinc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWTiVJCNBMZvtBX-E_1EiLiL2390873e1O3g&s",
+                    vitamin_a: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnNp7bTSIhS8vPWpKew8K50ytZrY01VKrw6Q&sA",
+                    vitamin_b12: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0_dhSbEGiyqboVshkC_ujkTpsAxhIX-5CLw&s",
+                    vitamin_c: "https://i0.wp.com/dermcollective.com/wp-content/uploads/2019/07/Vitamin-C-foods-for-skin.jpg?fit=1000%2C667&ssl=1",
+                    vitamin_d: "https://images.healthshots.com/healthshots/en/uploads/2022/03/28211325/Vitamin-d-foods.jpg"
+                };
+    
+                // Check if an image exists for the selected nutrient
+                if (images[nutrient]) {
+                    const img = document.createElement("img");
+                    img.src = images[nutrient];
+                    img.alt = nutrient;
+                    imageContainer.appendChild(img);
+                }
+            }
+        </script>
+    </body>
+    </html>
+    
+
+    
+
+
+</body>
+</html>

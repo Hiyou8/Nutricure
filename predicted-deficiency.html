@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriCure | Predicted Deficiency</title>
+    <link rel="stylesheet" href="../static/style.css">
+
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>NutriCure</h1>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="user-input.html">User Input</a>
+            <a href="predicted-deficiency.html">Predicted Deficiency</a>
+            <a href="recipes.html">Recipes</a>
+        </nav>
+    </header>
+    
+    <!-- Predicted Deficiency Section -->
+    <div class="container">
+        <section class="section">
+            <h2><b>Predicted Deficiency</b></h2>
+            <p>
+                This section will highlight potential deficiencies based on your data.
+            </p>
+          
+            <!-- Added dynamically updated deficiency -->
+            <p><b>Your Predicted Deficiency:</b> {{ deficiency }}</p>
+        </section>
+    </div>
+
+</body>
+</html>
